@@ -1,9 +1,6 @@
 import java.io.*;
-import java.util.*;
-import java.awt.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
-import activities.db.*;
 
 public class registerMenu extends HttpServlet {
 

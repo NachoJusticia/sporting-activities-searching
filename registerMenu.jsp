@@ -11,11 +11,11 @@
   <div class="registerForm">
     <p>Please, fill the following form to register</p>
 
-    <form action="register" method=POST>
+    <form action="confirmData" method=POST>
       <div class="container">
         <div class="contentForm">
           <label><b>Login</b></label>
-          <input type="text" placeholder="p.e. jose1994" name="username" required class="inputText">
+          <input type="text" placeholder="p.e. jose1994" name="login" required class="inputText">
         </div>
         <p>
           <label><b>Password</b></label>

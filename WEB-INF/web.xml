@@ -23,6 +23,14 @@ Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
 		<url-pattern>/registerMenu </url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>confirmData</servlet-name>
+		<servlet-class>confirmData</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>confirmData </servlet-name>
+		<url-pattern>/confirmData </url-pattern>
+	</servlet-mapping>
 
 	<welcome-file-list id="WelcomeFileList">
 		<welcome-file>inicio.html</welcome-file>
