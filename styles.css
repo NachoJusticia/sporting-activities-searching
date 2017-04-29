@@ -27,6 +27,21 @@
   background-color:beige;
 }
 
+.registerForm {
+  height:300px;
+  width:300px;
+  border:5px #CCC solid;
+  padding:25px;
+  border-radius: 15px;
+  color:#000000;
+  position: fixed;
+  top: 50%;
+  left: 45%;
+  margin-top: -50px;
+  margin-left: -100px;
+  background-color:beige;
+}
+
 .centered {
   height:130px;
   width:250px;
@@ -66,10 +81,14 @@
   box-shadow: 0 4px #999;
 }
 
-.button:hover {background-color: #3e8e41}
+.button:hover {background-color: #ffb76b}
 
 .button:active {
-  background-color: #3e8e41;
+  background-color: #ffb76b;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.inputText {
+  float: right;
 }
