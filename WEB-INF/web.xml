@@ -32,13 +32,22 @@ Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
 		<url-pattern>/confirmData </url-pattern>
 	</servlet-mapping>
 
-		<servlet>
+	<servlet>
 		<servlet-name>editData</servlet-name>
 		<servlet-class>editData</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>editData </servlet-name>
 		<url-pattern>/editData </url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>saveClient</servlet-name>
+		<servlet-class>saveClient</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>saveClient </servlet-name>
+		<url-pattern>/saveClient </url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list id="WelcomeFileList">

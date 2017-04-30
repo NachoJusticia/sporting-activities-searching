@@ -24,7 +24,7 @@
 			<div class="registerForm" style="width: 225px">
 				<p>Please, check your personal data...</p>
 
-				<form action="" method="POST">
+				<form action="saveClient" method="POST">
 					<div class="container">
 						<div class="contentForm">
 							<label>Login</label>
