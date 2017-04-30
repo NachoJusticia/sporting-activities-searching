@@ -1,5 +1,3 @@
-package activities;
-
 import activities.db.*;
 import java.sql.*;
 import java.io.*;
@@ -24,7 +22,7 @@ public class saveClient extends HttpServlet {
         } catch (Exception e) {
             
         }
-	    RequestDispatcher rd = req.getRequestDispatcher("clientSaved.jsp");
+	    RequestDispatcher rd = req.getRequestDispatcher("saveClient.jsp");
 	    rd.include(req, res);
 	}
 }
