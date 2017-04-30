@@ -4,7 +4,7 @@ import java.awt.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-public class Register extends HttpServlet {
+public class register extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws IOException, ServletException
