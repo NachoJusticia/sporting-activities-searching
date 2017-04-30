@@ -26,7 +26,7 @@
 			</div>
 			<div class="align">
 				<button type="submit" class="button">Login</button>
-				<button type="button" class="button">Cancel</button>
+				<a type="button" class="button" href="inicio.html">Cancel</a>
 			</div>&nbsp;
 			<div class="align">
 				<a href="registerMenu.jsp">Sign up</a></button>

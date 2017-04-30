@@ -50,13 +50,6 @@ Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
 		<url-pattern>/saveClient </url-pattern>
 	</servlet-mapping>
 
-			<servlet-name>saveClient</servlet-name>
-		<servlet-class>saveClient</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>saveClient </servlet-name>
-		<url-pattern>/saveClient </url-pattern>
-	</servlet-mapping>
 
 	<welcome-file-list id="WelcomeFileList">
 		<welcome-file>inicio.html</welcome-file>
