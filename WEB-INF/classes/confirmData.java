@@ -18,7 +18,6 @@ public class confirmData extends HttpServlet {
         String surname = req.getParameter("surname");
         String address = req.getParameter("address");
         String phone = req.getParameter("phone");
-        res.setContentType("text/html");
 
         session.setAttribute("login",login);
         session.setAttribute("password",password);
@@ -26,7 +25,7 @@ public class confirmData extends HttpServlet {
         session.setAttribute("surname",surname);
         session.setAttribute("address",address);
         session.setAttribute("phone",phone);
-
+        
 	    RequestDispatcher rd = req.getRequestDispatcher("confirmData.jsp");
 	    rd.include(req, res);
 	}
