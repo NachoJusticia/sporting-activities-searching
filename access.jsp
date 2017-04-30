@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Login</title>
+	<title>Sign in</title>
 </head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,21 +11,25 @@
 
 <body style="background-color:lightblue;">
 	<jsp:include page="copyright.jsp" />
-	<form action="acceso" method="POST">
+	<form action="access" method="POST">
 
 		<div class="centered">
-			<label><b>Username</b></label>
-			<input type="text" placeholder="Enter Username" name="uname" required>
-
-			<label><b>Password</b></label>
-			<input type="password" placeholder="Enter Password" name="psw" required>
-			<p></p>
+			<div class="container">
+				<div class="contentForm">
+					<label><b>Login</b></label>
+					<input type="text" placeholder="Enter login" name="login" required class="inputText" maxlength="16">
+				</div>
+				<p>
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter password" name="password" required class="inputText" maxlength="16">
+				</p>
+			</div>
 			<div class="align">
 				<button type="submit" class="button">Login</button>
 				<button type="button" class="button">Cancel</button>
 			</div>&nbsp;
 			<div class="align">
-				<a href="registro.html">Darse de alta</a></button>
+				<a href="registerMenu.jsp">Sign up</a></button>
 			</div>
 		</div>
 	</form>
