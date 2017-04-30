@@ -21,8 +21,8 @@ public class access extends HttpServlet {
         }
         
         if(authenticated) {
-            HTTPSession session = req.getSession(true);
-            session.setAttribute("login",(String))req.getParameter("login"));
+            HttpSession session = req.getSession(true);
+            session.setAttribute("login",(String)req.getParameter("login"));
             RequestDispatcher rd = req.getRequestDispatcher("application.jsp");
             rd.include(req, res);
         } else{
