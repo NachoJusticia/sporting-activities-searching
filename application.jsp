@@ -11,7 +11,6 @@
 
 <body style="background-color:lightblue;">
     <jsp:include page="copyright.jsp" />
-    <p>WELCOME</p>
     <h1> Sporting Activities Searching Application: Universidad Carlos III de Madrid </h1>
 <p>This application allows you visualizing all the sporting activities that are at present in Universidad Carlos III
 de Madrid in its three campus (Getafe, Leganes and Colmenarejo) </p>

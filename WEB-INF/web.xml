@@ -50,6 +50,24 @@ Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
 		<url-pattern>/saveClient </url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>badCredentials</servlet-name>
+		<servlet-class>badCredentials</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>badCredentials </servlet-name>
+		<url-pattern>/badCredentials </url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>preAccess</servlet-name>
+		<servlet-class>preAccess</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>preAccess </servlet-name>
+		<url-pattern>/preAccess </url-pattern>
+	</servlet-mapping>
+
 
 	<welcome-file-list id="WelcomeFileList">
 		<welcome-file>inicio.html</welcome-file>

@@ -26,14 +26,17 @@ public class access extends HttpServlet {
             RequestDispatcher rd = req.getRequestDispatcher("application.jsp");
             rd.include(req, res);
         } else{
-            PrintWriter out = res.getWriter();
-            int tries = (Integer) session.getAttribute("tries");
+            int tries = 0;
+            if(session.getAttribute("tries") != null){
+                tries = (Integer) session.getAttribute("tries");
+            }
             if(tries>=2){
-                res.sendRedirect("index.html");
-            } else{
+               res.sendRedirect("inicio.html");
+            } else {
                 tries = tries + 1;
-                out.println("<p>Authentication error. Please, try again...</p>");
-                RequestDispatcher rd = req.getRequestDispatcher("access.jsp");
+                session.setAttribute("tries",tries);
+
+                RequestDispatcher rd = req.getRequestDispatcher("badCredentials.jsp");
                 rd.include(req, res);
             }
             /*int tries = 0;
