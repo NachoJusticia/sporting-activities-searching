@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css" />
 
 <body style="background-color:lightblue;">
-	<jsp:include page="copyright.jsp" />
+	<%@ include file="copyright.include" %>
 	<p>&nbsp;</p>
 
 	<div class="align">

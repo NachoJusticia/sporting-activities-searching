@@ -12,7 +12,7 @@
 <body style="background-color:lightblue;">
     <%@ page session="true" %>
 
-        <jsp:include page="copyright.jsp" />
+        <%@ include file="copyright.include" %>
 
         <form action="access" method="POST">
 

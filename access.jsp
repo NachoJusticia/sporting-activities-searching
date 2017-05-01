@@ -10,10 +10,10 @@
 <link rel="stylesheet" type="text/css" href="styles.css" />
 
 <body style="background-color:lightblue;">
-	<jsp:include page="copyright.jsp" />
+	<%@ include file="copyright.include" %>
 
 	<form action="access" method="POST">
-
+		
 		<div class="centered">
 
 			<div class="container">
@@ -25,7 +25,7 @@
 					<label><b>Password</b></label>
 					<input type="password" placeholder="Enter password" name="password" required class="inputText" maxlength="16">
 				</p>
-			</div>
+			</div>&nbsp;
 			<div class="align">
 				<button type="submit" class="button">Login</button>
 				<a type="button" class="button" href="inicio.html">Cancel</a>

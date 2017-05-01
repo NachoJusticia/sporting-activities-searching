@@ -68,6 +68,14 @@ Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
 		<url-pattern>/preAccess </url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>list</servlet-name>
+		<servlet-class>list</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>list </servlet-name>
+		<url-pattern>/list </url-pattern>
+	</servlet-mapping>
 
 	<welcome-file-list id="WelcomeFileList">
 		<welcome-file>inicio.html</welcome-file>

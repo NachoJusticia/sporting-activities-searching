@@ -10,7 +10,7 @@
 
 <body style="background-color:lightblue;">
 	<%@ page session="true" %>
-		<jsp:include page="copyright.jsp" />
+		<%@ include file="copyright.include" %>
 
 		<%
 	String id = (String) session.getId();
