@@ -11,7 +11,7 @@
   <div class="registerForm">
     <p>Please, fill the following form to register</p>
 
-    <form action="confirmData" method=POST>
+    <form action=<%= response.encodeURL("confirmData") %> method=POST>
       <div class="container">
         <div class="contentForm">
           <label><b>Login</b></label>

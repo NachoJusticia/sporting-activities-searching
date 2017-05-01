@@ -21,7 +21,7 @@
 	String address = (String) session.getAttribute("address"); 
 	String phone = (String) session.getAttribute("phone"); %>
 
-			<div class="registerForm" style="width: 225px">
+			<div class="registerForm" style="width: 300px; height: 325px">
 				<p>Please, check your personal data...</p>
 
 				<form action="saveClient" method="POST">
@@ -49,6 +49,7 @@
 						<div class="align">
 							<button type="submit" class="button">Confirm</button>
 						</div>
+						<p></p>
 				</form>
 				<form action="editData" method="POST">
 					<div class="align">
