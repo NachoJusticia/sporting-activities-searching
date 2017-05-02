@@ -12,7 +12,7 @@ public class selectedActivityUnsubscribe extends HttpServlet {
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
         
-        HttpSession session = req.getSession();
+        HttpSession session = req.getSession(true);
         
         try {
             DBInteraction db = new DBInteraction();

@@ -21,7 +21,7 @@ public class access extends HttpServlet {
         } catch(Exception e) {
 
         }
-        HttpSession session = req.getSession();
+        HttpSession session = req.getSession(true);
 
         if(authenticated) {
             session.setAttribute("login",(String)req.getParameter("login"));

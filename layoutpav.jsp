@@ -4,10 +4,35 @@
 
     <head>
         <title>Spoting Activities Searching Application</title>
+        <script type="text/javascript">
+            // Extra:
+            // Hemos desarrollado esta función para colorear las filas de las 
+            // tablas alternando dos colores (dependiendo de si es fila par o impar)
+            function altRows(id) {
+                if (document.getElementsByTagName) {
+
+                    var table = document.getElementById(id);
+                    var rows = table.getElementsByTagName("tr");
+
+                    for (i = 0; i < rows.length; i++) {
+                        if (i % 2 == 0) {
+                            rows[i].className = "evenrowcolor";
+                        } else {
+                            rows[i].className = "oddrowcolor";
+                        }
+                    }
+                }
+            }
+
+            window.onload = function () {
+                altRows('alternatecolor');
+            }
+        </script>
     </head>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="tables.css" />
 
-    <body style="background-color:lightblue;">
+    <body style="padding-left:250px; padding-right:250px; background-color:lightblue;">
         <%@ include file="banner.include" %>
         <%@ include file="user.banner" %>
 
