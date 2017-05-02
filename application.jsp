@@ -15,11 +15,11 @@
             <img border="0" alt="UC3M" src="images/title.png" width="500" height="35">
         </div>
 
-        <p>This application allows you visualizing all the sporting activities that are at present in Universidad Carlos III
+        <p style="padding-left:250px; padding-right:250px">This application allows you visualizing all the sporting activities that are at present in Universidad Carlos III
             de Madrid in its three campus (Getafe, Leganes and Colmenarejo) </p>
         <p>&nbsp;</p>
-        <p>Please select an option <br>
-            <form action="list" method="POST">
+        <p style="padding-left:250px; padding-right:250px">Please select an option <br> <p>&nbsp;</p>
+            <form action=<%= response.encodeURL("list") %> method="POST" style="padding-left:340px; padding-right:250px">
                 <select name="type">
                     <option value="all_activities" SELECTED> List all sporting activities 
                     <option value="all_pavillions" SELECTED> List all pavillions
@@ -34,8 +34,8 @@
             <input type="text" name="text1" size=32><br>
         </p>
 
-        <input type="submit" value="SUBMIT">
-        <input type="reset" value="REMOVE">
+        <input type="submit" value="SUBMIT" class="button">
+        <input type="reset" value="REMOVE" class="button">
         </form>
 </body>
 

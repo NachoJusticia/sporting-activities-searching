@@ -7,7 +7,7 @@
     </head>
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
-    <body>
+    <body style="background-color:lightblue;">
         <%@ include file="copyright.include" %>
 
             <h1> List of Activities that fulfill the selected criterion </h1>

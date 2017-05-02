@@ -25,12 +25,12 @@
 		<div class="userSelection1">
 			<h3><b>Select an option</b></h3>
 			<div class="align">
-				<form action="preAccess" method="POST">
+				<form action=<%= response.encodeURL("preAccess") %> method="POST">
 					<div>
 						<input type="submit" class="button" value="Registered user"></input>
 					</div>
 				</form>&nbsp;
-				<form action="registerMenu" method="POST">
+				<form action=<%= response.encodeURL("registerMenu") %> method="POST">
 					<div>
 						<input type="submit" class="button" value="Non-registered user"></input>
 					</div>

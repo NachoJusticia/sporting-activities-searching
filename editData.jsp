@@ -21,7 +21,7 @@
   <div class="registerForm">
     <p>Please, edit your personal data</p>
 
-    <form action="confirmData" method=POST>
+    <form action=<%= response.encodeURL("confirmData") %> method=POST>
       <div class="container">
         <div class="contentForm">
           <label><b>Login</b></label>

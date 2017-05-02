@@ -6,7 +6,21 @@ import javax.servlet.http.*;
 public class access extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse res)throws IOException, ServletException{
-        doPost(req,res);
+        boolean authenticated = false;
+        
+        try { 
+            DBInteraction db = new DBInteraction();
+            authenticated = db.authentication((String)req.getParameter("login"),(String)req.getParameter("password"));
+        } catch(Exception e) {
+
+        }
+        HttpSession session = req.getSession();
+
+        if(authenticated) {
+            session.setAttribute("login",(String)req.getParameter("login"));
+            RequestDispatcher rd = req.getRequestDispatcher("application.jsp");
+            rd.include(req, res);
+        }
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{

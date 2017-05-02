@@ -12,7 +12,7 @@
 <body style="background-color:lightblue;">
 	<%@ include file="copyright.include" %>
 
-	<form action="access" method="POST">
+	<form action=<%= response.encodeURL("access") %> method="POST">
 		
 		<div class="centered">
 

@@ -24,7 +24,7 @@
 			<div class="registerForm" style="width: 300px; height: 325px">
 				<p>Please, check your personal data...</p>
 
-				<form action="saveClient" method="POST">
+				<form action=<%= response.encodeURL("saveClient") %> method="POST">
 					<div class="container">
 						<div class="contentForm">
 							<label>Login</label>
@@ -51,7 +51,7 @@
 						</div>
 						<p></p>
 				</form>
-				<form action="editData" method="POST">
+				<form action=<%= response.encodeURL("editData") %> method="POST">
 					<div class="align">
 						<button type="submit" class="button">Back</a>
 					</div>

@@ -14,7 +14,7 @@
 
         <%@ include file="copyright.include" %>
 
-        <form action="access" method="POST">
+        <form action=<%= response.encodeURL("access") %> method="POST">
 
             <div class="centered">
                 <label style="color: red">Authentication error. Please, check your user and password and try again...</label>
