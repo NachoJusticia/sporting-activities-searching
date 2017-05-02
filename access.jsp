@@ -11,7 +11,10 @@
 
 <body style="background-color:lightblue;">
 	<%@ include file="banner.include" %>
-
+	&nbsp;
+		<div class="align">
+			<img border="0" alt="UC3M" src="images/signin.png" width="200" height="42">
+		</div>
 	<form action=<%= response.encodeURL("access") %> method="POST">
 		
 		<div class="centered">

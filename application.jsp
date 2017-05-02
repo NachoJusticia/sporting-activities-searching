@@ -39,7 +39,7 @@
                 </select>
                     </p>
                     <p>
-                        Introduce the cost of the activity or the pavillion name depending on your selection:
+                        Introduce the cost of the activity or the activity name depending on your selection:
                         <input type="text" name="text1" size=32><br>
                     </p>
 

@@ -8,6 +8,10 @@
 
 <body style="background-color:lightblue;">
   <%@ include file="banner.include" %>
+  	&nbsp;
+		<div class="align">
+			<img border="0" alt="UC3M" src="images/signup.png" width="200" height="42">
+		</div>
     <div class="registerForm">
       <p>Please, fill the following form to register</p>
 
