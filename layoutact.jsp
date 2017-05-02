@@ -1,6 +1,9 @@
 <link rel="stylesheet" type="text/css" href="tables.css" />
 
 <script type="text/javascript">
+    // Extra:
+    // Hemos desarrollado esta función para colorear las filas de las 
+    // tablas alternando dos colores (dependiendo de si es fila par o impar)
     function altRows(id){
         if(document.getElementsByTagName){  
             
@@ -17,7 +20,7 @@
         }
     }
     
-    window.onload=function(){
+    window.onload = function(){
         altRows('alternatecolor');
     }
 </script>

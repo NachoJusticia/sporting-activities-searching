@@ -22,6 +22,7 @@ public class list extends HttpServlet {
 	    //Retrieve the parameters from the form
 		type=req.getParameter("type");
 	    text=req.getParameter("text1");
+		HttpSession session = req.getSession(true);
 	  try{
 		DBInteraction db=new DBInteraction();
 		//Depending on the user selected option, calls the properly method of the User object
@@ -40,6 +41,15 @@ public class list extends HttpServlet {
 		}
 		else if (type.equals("name")){
 			data=db.listactname(text);
+		}
+		else if(type.equals("subscribed_activities")){
+			data = db.listactusr((String)session.getAttribute("login"));
+		}
+		else if(type.equals("register_activity")){
+			db.regactivity((String)session.getAttribute("login"),text);
+		}
+		else if(type.equals("unsubscribe_activity")){
+			db.unregactivity((String)session.getAttribute("login"),text);
 		}
 		else{
 			data=db.listactpav(text);
@@ -60,19 +70,24 @@ public class list extends HttpServlet {
         else {
 		    RequestDispatcher layout=req.getRequestDispatcher("layoutact.jsp");
 		    layout.include(req, res);
-			for(int i=0;i<data.size();i++) {
-			    Activity a = (Activity)data.get(i);
-			    int id = a.getid();
-			    String name = a.getname();
-			    String description = a.getdescription();
-			    String initial = a.getinitial();
-			    Float cost = a.getcost();
-			    String pavname = a.getpavname();
-			    int total = a.gettotal();
-			    int occupied = a.getoccupied();
-				RequestDispatcher outact=req.getRequestDispatcher("outact.jsp?id="+id+"&name="+name+"&description="+description+"&initial="+initial+"&cost="+cost+"&pavname="+pavname+"&total="+total+"&occupied="+occupied);
-		        outact.include(req, res);			
-	        }
+			if(data.size()>0){
+				for(int i=0;i<data.size();i++) {
+					Activity a = (Activity)data.get(i);
+					int id = a.getid();
+					String name = a.getname();
+					String description = a.getdescription();
+					String initial = a.getinitial();
+					Float cost = a.getcost();
+					String pavname = a.getpavname();
+					int total = a.gettotal();
+					int occupied = a.getoccupied();
+					RequestDispatcher outact=req.getRequestDispatcher("outact.jsp?id="+id+"&name="+name+"&description="+description+"&initial="+initial+"&cost="+cost+"&pavname="+pavname+"&total="+total+"&occupied="+occupied+"&message= ");
+					outact.include(req, res);			
+				}
+			} else {
+				RequestDispatcher outact=req.getRequestDispatcher("outact.jsp?id=-&name=-&description=-&initial=-&cost=-&pavname=-&total=-&occupied=-&message=Zero results found. Please, try again...");
+				outact.include(req, res);
+			}
 		}
 	    RequestDispatcher end=req.getRequestDispatcher("end.jsp");
 	    end.include(req, res);

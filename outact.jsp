@@ -1,3 +1,4 @@
+<h2 style="color: red; padding-left:250px; padding-right:250px"><%= request.getParameter("message")%></h2>
 <tr>
     <td>
         <%=request.getParameter("id")%>
