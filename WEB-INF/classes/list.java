@@ -23,6 +23,8 @@ public class list extends HttpServlet {
 		type=req.getParameter("type");
 	    text=req.getParameter("text1");
 		HttpSession session = req.getSession(true);
+		session.setAttribute("message","");
+		
 	  try{
 		DBInteraction db=new DBInteraction();
 		//Depending on the user selected option, calls the properly method of the User object
