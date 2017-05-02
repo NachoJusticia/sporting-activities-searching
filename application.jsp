@@ -9,8 +9,8 @@
 
 <link rel="stylesheet" type="text/css" href="styles.css" />
 
-<body style="background-color:lightblue;">
-    <%@ include file="copyright.include" %>
+<body style="background-color:lightblue; padding-left:130px; padding-right:130px">
+    <%@ include file="banner.include" %>
     <% if((String)session.getAttribute("login")==null){
             response.sendRedirect("inicio.html");
     } %>
@@ -30,7 +30,7 @@
                     <option value="cost" SELECTED> List activities for which there are free places costing less than a certain amount 
                     <option value="name" SELECTED> List activities by name
                     <option value="subscribed_activities" SELECTED> List all activities in which I am subscribed
-                    <option value="register_activity" SELECTED> Enroll to an activity
+                    <option value="subscribe_activity" SELECTED> Subscribe to an activity
                     <option value="unsubscribe_activity" SELECTED> Unubscribe from an activity
                 </select>
         </p>
@@ -42,6 +42,7 @@
         <input type="submit" value="SUBMIT" class="button">
         <input type="reset" value="REMOVE" class="button">
         </form>
+        <%@ include file="copyright.include" %>
 </body>
 
 </html>

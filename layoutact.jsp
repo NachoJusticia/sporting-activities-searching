@@ -35,18 +35,18 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <body style="background-color:lightblue; padding-left:130px; padding-right:130px">
-        <%@ include file="copyright.include" %>
+        <%@ include file="banner.include" %>
 
             <h2 style="padding-left:100px; padding-right:100px"> List of Activities that fulfill the selected criterion </h2>
             <table class="altrowstable" id="alternatecolor" style="padding-left:250px; padding-right:250px">
                 <tr>
                     <td><b>ID</b></td>
-                    <td><b>NAME</b></td>
-                    <td><b>DESCRIPTION</b></td>
-                    <td><b>INITIAL DATE</b></td>
-                    <td><b>COST</b></td>
-                    <td><b>PAVILLION NAME</b></td>
-                    <td><b>TOTAL PLACES</b></td>
-                    <td><b>OCCUPIED PLACES</b></td>
+                    <td><b>Name</b></td>
+                    <td><b>Description</b></td>
+                    <td><b>Initial Date</b></td>
+                    <td><b>Cost </b></td>
+                    <td><b>Pavillion</b></td>
+                    <td><b>Total places</b></td>
+                    <td><b>Occupied places</b></td>
                 </tr>
                 <p>

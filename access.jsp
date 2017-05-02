@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css" />
 
 <body style="background-color:lightblue;">
-	<%@ include file="copyright.include" %>
+	<%@ include file="banner.include" %>
 
 	<form action=<%= response.encodeURL("access") %> method="POST">
 		
@@ -35,6 +35,7 @@
 			</div>
 		</div>
 	</form>
+	<%@ include file="copyright.include" %>
 </body>
 
 </html>

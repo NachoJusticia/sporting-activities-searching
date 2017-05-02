@@ -10,7 +10,7 @@
 
 <body style="background-color:lightblue;">
 	<%@ page session="true" %>
-		<%@ include file="copyright.include" %>
+		<%@ include file="banner.include" %>
 
 		<%
 	String id = (String) session.getId();
@@ -59,6 +59,6 @@
 				</div>
 				</form>
 			</div>
-
+ <%@ include file="copyright.include" %>
 </body>
 </html>

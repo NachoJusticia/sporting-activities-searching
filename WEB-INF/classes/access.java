@@ -7,7 +7,8 @@ public class access extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse res)throws IOException, ServletException{
     
-       res.sendRedirect("inicio.html");
+        // Redirect to the home page if the user is not authenticated but tries to access the application
+        res.sendRedirect("inicio.html");
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{

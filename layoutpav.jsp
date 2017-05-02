@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <body style="background-color:lightblue;">
-        <%@ include file="copyright.include" %>
+        <%@ include file="banner.include" %>
 
             <h1> List of all the pavillions </h1>
             <table>

@@ -45,8 +45,8 @@ public class list extends HttpServlet {
 		else if(type.equals("subscribed_activities")){
 			data = db.listactusr((String)session.getAttribute("login"));
 		}
-		else if(type.equals("register_activity")){
-			db.regactivity((String)session.getAttribute("login"),text);
+		else if(type.equals("subscribe_activity")){
+			data=db.listallact();
 		}
 		else if(type.equals("unsubscribe_activity")){
 			db.unregactivity((String)session.getAttribute("login"),text);
@@ -68,9 +68,10 @@ public class list extends HttpServlet {
 			}
 	    }
         else {
-		    RequestDispatcher layout=req.getRequestDispatcher("layoutact.jsp");
-		    layout.include(req, res);
-			if(data.size()>0){
+
+			if(data.size()>0 && !type.equals("subscribe_activity")){
+				RequestDispatcher layout=req.getRequestDispatcher("layoutact.jsp");
+		    	layout.include(req, res);
 				for(int i=0;i<data.size();i++) {
 					Activity a = (Activity)data.get(i);
 					int id = a.getid();
@@ -84,13 +85,39 @@ public class list extends HttpServlet {
 					RequestDispatcher outact=req.getRequestDispatcher("outact.jsp?id="+id+"&name="+name+"&description="+description+"&initial="+initial+"&cost="+cost+"&pavname="+pavname+"&total="+total+"&occupied="+occupied+"&message= ");
 					outact.include(req, res);			
 				}
+			}
+			else if(type.equals("subscribe_activity")) {
+				RequestDispatcher layout=req.getRequestDispatcher("layoutactForm.jsp");
+		    	layout.include(req, res);
+				for(int i=0;i<data.size();i++) {
+					Activity a = (Activity)data.get(i);
+					int id = a.getid();
+					String name = a.getname();
+					String description = a.getdescription();
+					String initial = a.getinitial();
+					Float cost = a.getcost();
+					String pavname = a.getpavname();
+					int total = a.gettotal();
+					int occupied = a.getoccupied();
+					RequestDispatcher outact=req.getRequestDispatcher("outactForm.jsp?id="+id+"&name="+name+"&description="+description+"&initial="+initial+"&cost="+cost+"&pavname="+pavname+"&total="+total+"&occupied="+occupied+"&message= ");
+					outact.include(req, res);			
+				}
 			} else {
+				RequestDispatcher layout=req.getRequestDispatcher("layoutact.jsp");
+		    	layout.include(req, res);
 				RequestDispatcher outact=req.getRequestDispatcher("outact.jsp?id=-&name=-&description=-&initial=-&cost=-&pavname=-&total=-&occupied=-&message=Zero results found. Please, try again...");
 				outact.include(req, res);
 			}
 		}
-	    RequestDispatcher end=req.getRequestDispatcher("end.jsp");
-	    end.include(req, res);
+		if(type.equals("subscribe_activity")){
+			RequestDispatcher end=req.getRequestDispatcher("end2.jsp");
+	    	end.include(req, res);
+		}
+		else {
+			RequestDispatcher end=req.getRequestDispatcher("end.jsp");
+	    	end.include(req, res);
+		}
+	    
 	    db.close();
 	  } //end try
 	  catch (Exception e){  }

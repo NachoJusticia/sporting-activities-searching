@@ -5,7 +5,7 @@
 <html>
   <body bgcolor="white">
 
-    <%@ include file="copyright.include" %>
+    <%@ include file="banner.include" %>
 
     <table>
       <tr>

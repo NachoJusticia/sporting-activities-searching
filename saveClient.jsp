@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css" />
 
 <body style="background-color:lightblue;">
-	<%@ include file="copyright.include" %>
+	<%@ include file="banner.include" %>
 	<p>&nbsp;</p>
 
 	<div class="align">
@@ -24,6 +24,7 @@
 		<a href="inicio.html">Go to home page</a>
 
 	</div>
+	 <%@ include file="copyright.include" %>
 </body>
 
 </html>

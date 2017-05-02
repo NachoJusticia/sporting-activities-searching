@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css" />
 
 <body style="background-color:lightblue;">
-  <%@ include file="copyright.include" %>
+  <%@ include file="banner.include" %>
     <div class="registerForm">
       <p>Please, fill the following form to register</p>
 
@@ -45,6 +45,7 @@
         </div>
       </form>
     </div>
+     <%@ include file="copyright.include" %>
 </body>
 
 </html>

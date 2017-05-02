@@ -12,7 +12,7 @@
 <body style="background-color:lightblue;">
     <%@ page session="true" %>
 
-        <%@ include file="copyright.include" %>
+        <%@ include file="banner.include" %>
 
         <form action=<%= response.encodeURL("access") %> method="POST">
 
@@ -38,6 +38,7 @@
                 </div>
             </div>
         </form>
+         <%@ include file="copyright.include" %>
 </body>
 
 </html>
