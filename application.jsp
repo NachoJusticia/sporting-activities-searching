@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css" />
 
 <body style="background-color:lightblue; padding-left:130px; padding-right:130px">
+    <%@ page session="true" %>
     <%@ include file="user.banner" %>
         <%@ include file="banner.include" %>
             <% if((String)session.getAttribute("login")==null){
@@ -33,13 +34,14 @@
                     <option value="free_places" SELECTED> List activities for which there are currently free places 
                     <option value="cost" SELECTED> List activities for which there are free places costing less than a certain amount 
                     <option value="name" SELECTED> List activities by name
+                    <option value="act_pav" SELECTED> List activities for which there are places in certain pavillion
                     <option value="subscribed_activities" SELECTED> List all activities in which I am subscribed
                     <option value="subscribe_activity" SELECTED> Subscribe to an activity
                     <option value="unsubscribe_activity" SELECTED> Unubscribe from an activity
                 </select>
                     </p>
                     <p>
-                        Introduce the cost of the activity or the activity name depending on your selection:
+                        Introduce the cost of the activity, the activity name or the pavillion name depending on your selection:
                         <input type="text" name="text1" size=32><br>
                     </p>
 

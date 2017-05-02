@@ -43,7 +43,7 @@
         <%@ include file="banner.include" %>
             <h2> List of Activities that fulfill the selected criterion </h2>
             <h4>Please, select one or more activities that you would like to <b>unregister</b></h4>
-            <form action="selectedActivityUnsubscribe" method="POST">
+            <form action=<%= response.encodeURL("selectedActivityUnsubscribe") %> method="POST">
                 <div><input type="submit" class="button" value="Submit"></div>
                 <table class="altrowstable" id="alternatecolor" style="padding-left:250px; padding-right:250px">
                     <tr>

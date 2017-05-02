@@ -14,6 +14,7 @@ public class selectedActivityUnsubscribe extends HttpServlet {
         
         HttpSession session = req.getSession(true);
         session.setAttribute("message","");
+        String login = (String)session.getAttribute("login");
         
         try {
             DBInteraction db = new DBInteraction();
@@ -22,7 +23,7 @@ public class selectedActivityUnsubscribe extends HttpServlet {
             for(int i=1; i <= activitiesLength; i++){
                 if(req.getParameter(""+i) != null){
                     counter++;
-                    db.unregactivity((String)session.getAttribute("login"),""+i);
+                    db.unregactivity(login,""+i);
                 }
             }
 

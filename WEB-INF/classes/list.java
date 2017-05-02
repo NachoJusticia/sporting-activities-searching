@@ -53,8 +53,8 @@ public class list extends HttpServlet {
 		else if(type.equals("unsubscribe_activity")){
 			data = db.listactusr((String)session.getAttribute("login"));
 		}
-		else{
-			data=db.listactpav(text);
+		else { // List activities of certain pavillion
+			data = db.listactpav(text);
 		}
 
         //Depending on if we list pavillions or activities, the rendering will be different
