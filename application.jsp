@@ -11,6 +11,9 @@
 
 <body style="background-color:lightblue;">
     <%@ include file="copyright.include" %>
+    <% if((String)session.getAttribute("login")==null){
+            response.sendRedirect("inicio.html");
+    } %>
         <div class="align">
             <img border="0" alt="UC3M" src="images/title.png" width="500" height="35">
         </div>

@@ -7,7 +7,7 @@ public class access extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse res)throws IOException, ServletException{
     
-       res.sendRedirect("inicio.jsp");
+       res.sendRedirect("inicio.html");
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{
