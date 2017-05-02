@@ -1,27 +1,27 @@
 <h2 style="color: red; padding-left:250px; padding-right:250px"><%= request.getParameter("message")%></h2>
 <tr>
-    <td>
+    <td class="align">
         <%=request.getParameter("id")%>
     </td>
-    <td>
+    <td class="align">
         <%=request.getParameter("name")%>
     </td>
-    <td>
+    <td class="align">
         <%= request.getParameter("description")%>
     </td>
-    <td>
+    <td class="align">
         <%=request.getParameter("initial")%>
     </td>
-    <td>
+    <td class="align">
         <%= request.getParameter("cost")%>
     </td>
-    <td>
+    <td class="align">
         <%= request.getParameter("pavname")%>
     </td>
-    <td>
+    <td class="align">
         <%= request.getParameter("total")%>
     </td>
-    <td>
+    <td class="align">
         <%= request.getParameter("occupied")%>
     </td>
 </tr>

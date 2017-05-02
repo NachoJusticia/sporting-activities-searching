@@ -26,7 +26,7 @@
         <td class="align">
             <%= request.getParameter("occupied")%>
         </td>
-        <td class="align"style="background-color: #a2ff9e">
+        <td class="align" style="background-color: #ff6363">
             <input type="checkbox" name=<%=request.getParameter("id")%>>
         </td>
     </tr>

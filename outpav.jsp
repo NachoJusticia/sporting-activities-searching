@@ -1,8 +1,8 @@
 <tr>
-    <td>
+    <td class="align">
         <%=request.getParameter("name")%>
     </td>
-    <td>
+    <td class="align">
         <%=request.getParameter("location")%>
     </td>
 </tr>

@@ -49,7 +49,7 @@ public class list extends HttpServlet {
 			data=db.listallact();
 		}
 		else if(type.equals("unsubscribe_activity")){
-			db.unregactivity((String)session.getAttribute("login"),text);
+			data = db.listactusr((String)session.getAttribute("login"));
 		}
 		else{
 			data=db.listactpav(text);
@@ -69,7 +69,7 @@ public class list extends HttpServlet {
 	    }
         else {
 
-			if(data.size()>0 && !type.equals("subscribe_activity")){
+			if(data.size()>0 && !type.equals("subscribe_activity") && !type.equals("unsubscribe_activity")){
 				RequestDispatcher layout=req.getRequestDispatcher("layoutact.jsp");
 		    	layout.include(req, res);
 				for(int i=0;i<data.size();i++) {
@@ -102,7 +102,25 @@ public class list extends HttpServlet {
 					RequestDispatcher outact=req.getRequestDispatcher("outactForm.jsp?id="+id+"&name="+name+"&description="+description+"&initial="+initial+"&cost="+cost+"&pavname="+pavname+"&total="+total+"&occupied="+occupied+"&message= ");
 					outact.include(req, res);			
 				}
-			} else {
+			}
+			else if(type.equals("unsubscribe_activity")) {
+				RequestDispatcher layout=req.getRequestDispatcher("layoutactUnsubscribe.jsp");
+		    	layout.include(req, res);
+				for(int i=0;i<data.size();i++) {
+					Activity a = (Activity)data.get(i);
+					int id = a.getid();
+					String name = a.getname();
+					String description = a.getdescription();
+					String initial = a.getinitial();
+					Float cost = a.getcost();
+					String pavname = a.getpavname();
+					int total = a.gettotal();
+					int occupied = a.getoccupied();
+					RequestDispatcher outact=req.getRequestDispatcher("outactUnsubscribe.jsp?id="+id+"&name="+name+"&description="+description+"&initial="+initial+"&cost="+cost+"&pavname="+pavname+"&total="+total+"&occupied="+occupied+"&message= ");
+					outact.include(req, res);			
+				}
+			}
+			else {
 				RequestDispatcher layout=req.getRequestDispatcher("layoutact.jsp");
 		    	layout.include(req, res);
 				RequestDispatcher outact=req.getRequestDispatcher("outact.jsp?id=-&name=-&description=-&initial=-&cost=-&pavname=-&total=-&occupied=-&message=Zero results found. Please, try again...");
