@@ -1,0 +1,3 @@
+<div class="user">
+    <p class="align">User &nbsp; <b><%= session.getAttribute("login")%></b></p>
+</div>

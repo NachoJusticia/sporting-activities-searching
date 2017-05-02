@@ -36,6 +36,8 @@
 
     <body style="background-color:lightblue; padding-left:130px; padding-right:130px">
         <%@ include file="banner.include" %>
+        <%@ include file="user.banner" %>
+
 
             <h2 style="padding-left:100px; padding-right:100px"> List of Activities that fulfill the selected criterion </h2>
             <table class="altrowstable" id="alternatecolor" style="padding-left:250px; padding-right:250px">

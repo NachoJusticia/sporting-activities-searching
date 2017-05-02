@@ -29,6 +29,8 @@
 </script>
 
 <%@ page errorPage="errorHandling.jsp" %>
+<%@ include file="user.banner" %>
+
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
     <html>
 

@@ -9,9 +9,11 @@
 
     <body style="background-color:lightblue;">
         <%@ include file="banner.include" %>
+        <%@ include file="user.banner" %>
+
 
             <h1> List of all the pavillions </h1>
-            <table>
+            <table class="altrowstable" id="alternatecolor" style="padding-left:250px; padding-right:250px">
                 <tr>
                     <td><b>PAVILLION NAME</b></td>
                     <td><b>LOCATION</b></td>

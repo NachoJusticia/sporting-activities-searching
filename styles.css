@@ -1,4 +1,4 @@
-.login { 
+.login {
 	height:110px;
 	width:190px;
 	margin:auto;
@@ -7,11 +7,26 @@
 	color:#3CB724
 }
 
-.login input { 
+.user {
+  position: absolute;
+  top:0;
+  right:0;
+  height:80px;
+  width:100px;
+  border:5px #CCC solid;
+  padding:5px;
+  border-radius: 15px;
+  color:#000000;
+  margin-top: 5px;
+  margin-right: 5px;
+  background-color:beige;
+}
+
+.login input {
 	padding:5px;
-	margin:5px
+	margin:5px;
  }
- 
+
 .userSelection1 {
   height:180px;
   width:250px;

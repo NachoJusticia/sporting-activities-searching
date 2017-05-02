@@ -39,6 +39,8 @@
 
     <body style="background-color:lightblue; padding-left:130px; padding-right:130px"   >
         <%@ include file="banner.include" %>
+        <%@ include file="user.banner" %>
+
             <h2> List of Activities that fulfill the selected criterion </h2>
             <h4>Please, select one or more activities that you would like to participate:</h4>
             <form action="selectedActivity" method="POST">
