@@ -13,7 +13,7 @@
     <%@ include file="user.banner" %>
         <%@ include file="banner.include" %>
             <% if((String)session.getAttribute("login")==null){
-            response.sendRedirect("inicio.html");
+                response.sendRedirect("inicio.html");
             } %>
                 <% String message = (String) session.getAttribute("message");%>
                     <p name="message" style="color:red"><%= message %></p>
@@ -26,7 +26,7 @@
                         Carlos III de Madrid in its three campus (Getafe, Leganes and Colmenarejo) </p>
                     <p>&nbsp;</p>
                     <p style="padding-left:250px; padding-right:250px">Please select an option <br>
-                        <form action=<%=response.encodeURL( "list") %> method="POST" style="padding-left:340px; padding-right:250px">
+                        <form action=<%= response.encodeURL("list") %> method="POST" style="padding-left:340px; padding-right:250px">
                             <select name="type">
                     <option value="all_activities" SELECTED> List all sporting activities 
                     <option value="all_pavillions" SELECTED> List all pavillions
