@@ -6,21 +6,8 @@ import javax.servlet.http.*;
 public class access extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse res)throws IOException, ServletException{
-        boolean authenticated = false;
-        
-        try { 
-            DBInteraction db = new DBInteraction();
-            authenticated = db.authentication((String)req.getParameter("login"),(String)req.getParameter("password"));
-        } catch(Exception e) {
-
-        }
-        HttpSession session = req.getSession();
-
-        if(authenticated) {
-            session.setAttribute("login",(String)req.getParameter("login"));
-            RequestDispatcher rd = req.getRequestDispatcher("application.jsp");
-            rd.include(req, res);
-        }
+    
+       res.sendRedirect("inicio.jsp");
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{
@@ -53,18 +40,6 @@ public class access extends HttpServlet {
                 RequestDispatcher rd = req.getRequestDispatcher("badCredentials.jsp");
                 rd.include(req, res);
             }
-            /*int tries = 0;
-            tries = (Integer) session.getAttribute("tries");
-            if(session.getAttribute("tries")!=null){
-                tries = tries + 1;
-            }else{
-                tries = 0;
-            }
-            
-            session.setAttribute("tries",tries);
-
-            RequestDispatcher rd = req.getRequestDispatcher("access.jsp");
-            rd.include(req, res);*/
         }
 	}
 }
