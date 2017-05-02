@@ -19,14 +19,16 @@
             de Madrid in its three campus (Getafe, Leganes and Colmenarejo) </p>
         <p>&nbsp;</p>
         <p style="padding-left:250px; padding-right:250px">Please select an option <br> <p>&nbsp;</p>
-            <form action=<%= response.encodeURL("list") %> method="POST" style="padding-left:340px; padding-right:250px">
+            <form action=<%=response.encodeURL("list") %> method="POST" style="padding-left:340px; padding-right:250px">
                 <select name="type">
                     <option value="all_activities" SELECTED> List all sporting activities 
                     <option value="all_pavillions" SELECTED> List all pavillions
                     <option value="free_places" SELECTED> List activities for which there are currently free places 
                     <option value="cost" SELECTED> List activities for which there are free places costing less than a certain amount 
                     <option value="name" SELECTED> List activities by name
-                    <option value="all_activities" SELECTED> List all sporting activities
+                    <option value="subscribed_activities" SELECTED> List all activities in which I am subscribed
+                    <option value="register_activity" SELECTED> Enroll to an activity
+                    <option value="unsubscribe_activity" SELECTED> Unubscribe from an activity
                 </select>
         </p>
         <p>
