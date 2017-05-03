@@ -122,6 +122,25 @@ public class DBInteraction {
 		return (data);
 	}
 
+		//This method requests the execution of a SQL sentence for listing all the clients
+	//and it retrieves all the information for each client, storing each client as an element
+	//of an array. Each element contains an object of the type Client
+		
+	public ArrayList getUserData(String login) throws Exception{
+		ArrayList data = new ArrayList();
+		String selection="SELECT * FROM CLIENTS WHERE login='"+login+"'";
+		ResultSet rs=q.doSelect(selection);
+		while (rs.next()) {                     
+		   // We do not get the password
+           String name = rs.getString(3);
+		   String surname = rs.getString(4);
+           String address = rs.getString(5);
+		   String phone = rs.getString(6);
+           data.add(new Client(login, "", name, surname, address, phone));
+	    }
+		return (data);
+	}
+
 	//This method requests the execution of a SQL sentence for listing activities depending on some criterion
 	//This method is common to all the listing activities operations
 	//and it retrieves all the information for each activity, storing each activity as an element

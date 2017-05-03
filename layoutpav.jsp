@@ -33,8 +33,8 @@
     <link rel="stylesheet" type="text/css" href="tables.css" />
 
     <body style="padding-left:250px; padding-right:250px; background-color:lightblue;">
-        <%@ include file="banner.include" %>
-        <%@ include file="user.banner" %>
+    <%@ include file="user.banner" %>
+    <%@ include file="banner.include" %>
 
 
             <h1> List of all the pavillions </h1>

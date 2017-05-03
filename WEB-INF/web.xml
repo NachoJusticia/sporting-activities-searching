@@ -104,6 +104,15 @@ Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
 		<url-pattern>/logoutServlet </url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>viewProfile</servlet-name>
+		<servlet-class>viewProfile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>viewProfile </servlet-name>
+		<url-pattern>/viewProfile </url-pattern>
+	</servlet-mapping>
+
 	<welcome-file-list id="WelcomeFileList">
 		<welcome-file>inicio.html</welcome-file>
 		</welcome-file-list>

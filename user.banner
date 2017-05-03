@@ -1,6 +1,10 @@
 <div class="user">
-    <p class="align">User &nbsp; <b><%= session.getAttribute("login")%></b></p>
-    <form action="logoutServlet" method="POST">
+    <p class="align">User &nbsp;<b><%= session.getAttribute("login")%></b></p>
+    <form action=<%= response.encodeURL("viewProfile") %> method="POST" class="align">
+        <input type="submit" class="viewProfile" value="View profile">
+    </form>
+    <p></p>
+    <form action="logoutServlet" method="POST" class="align">
         <input type="submit" class="loggoutButton" value="Log out">
     </form>
 </div>

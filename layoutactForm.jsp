@@ -38,8 +38,8 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <body style="background-color:lightblue; padding-left:130px; padding-right:130px"   >
-        <%@ include file="banner.include" %>
-        <%@ include file="user.banner" %>
+    <%@ include file="user.banner" %>
+    <%@ include file="banner.include" %>
 
             <h2> List of Activities that fulfill the selected criterion </h2>
             <h4>Please, select one or more activities that you would like to participate:</h4>

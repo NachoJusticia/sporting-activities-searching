@@ -12,7 +12,7 @@
 <body style="background-color:lightblue; padding-left:130px; padding-right:130px">
     <%@ page session="true" %>
     <%@ include file="user.banner" %>
-        <%@ include file="banner.include" %>
+    <%@ include file="banner.include" %>
             <% if((String)session.getAttribute("login")==null){
                 response.sendRedirect("inicio.html");
             } %>

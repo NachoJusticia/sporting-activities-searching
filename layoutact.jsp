@@ -35,8 +35,8 @@
 
 
     <body style="background-color:lightblue; padding-left:130px; padding-right:130px">
-        <%@ include file="banner.include" %>
-            <%@ include file="user.banner" %>
+    <%@ include file="user.banner" %>
+    <%@ include file="banner.include" %>
 
 
                 <h2 style="padding-left:100px; padding-right:100px"> List of Activities that fulfill the selected criterion </h2>

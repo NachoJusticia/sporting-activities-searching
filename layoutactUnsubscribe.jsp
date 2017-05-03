@@ -29,7 +29,6 @@
 </script>
 
 <%@ page errorPage="errorHandling.jsp" %>
-<%@ include file="user.banner" %>
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
     <html>
@@ -40,7 +39,8 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <body style="background-color:lightblue; padding-left:130px; padding-right:130px"   >
-        <%@ include file="banner.include" %>
+    <%@ include file="user.banner" %>
+    <%@ include file="banner.include" %>
             <h2> List of Activities that fulfill the selected criterion </h2>
             <h4>Please, select one or more activities that you would like to <b>unregister</b></h4>
             <form action=<%= response.encodeURL("selectedActivityUnsubscribe") %> method="POST">

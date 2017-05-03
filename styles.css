@@ -11,15 +11,15 @@
   position: absolute;
   top:0;
   right:0;
-  height:110px;
-  width:100px;
+  height:150px;
+  width:140px;
   border:5px #CCC solid;
   padding:5px;
   border-radius: 15px;
   color:#000000;
   margin-top: 5px;
   margin-right: 5px;
-  background-color: #77abff;
+  background-color: #7cacfa;
   box-shadow: 0px 9px #999;
 }
 
@@ -97,14 +97,28 @@
   box-shadow: 0 4px #999;
 }
 
-.loggoutButton {
+.viewProfile {
   display: inline-block;
   padding: 5px 13px;
   font-size: 15px;
   cursor: pointer;
   text-decoration: none;
   color: #000000;
-  background-color: #ff4c3f;
+  background-color: #7aaaaf;
+  border: solid;
+  border-radius: 6px;
+  box-shadow: 1 1px #999;
+}
+
+.loggoutButton {
+  margin-top: 5px;
+  display: inline-block;
+  padding: 5px 13px;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000000;
+  background-color: #faaaaf;
   border: solid;
   border-radius: 6px;
   box-shadow: 1 1px #999;
