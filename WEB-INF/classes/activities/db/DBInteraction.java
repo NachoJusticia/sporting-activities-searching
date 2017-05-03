@@ -32,6 +32,11 @@ public class DBInteraction {
         q=new Query(con);
 	}    
 
+	public void updateUser(String login, String name, String surname, String address, String phone) throws Exception {
+		String peticion = "UPDATE CLIENTS SET NAME = '"+name+"', SURNAME = '"+surname+"', ADDRESS = '"+address+"', PHONE = '"+phone+"' WHERE LOGIN = '"+login+"';";
+		q.updateSQL(peticion,con);
+	}
+
     //method to close the Statement and the Connection objects
     
 	public void close()throws Exception{

@@ -113,6 +113,33 @@ Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
 		<url-pattern>/viewProfile </url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>confirmEditProfile</servlet-name>
+		<servlet-class>confirmEditProfile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>confirmEditProfile </servlet-name>
+		<url-pattern>/confirmEditProfile </url-pattern>
+	</servlet-mapping>
+
+		<servlet>
+		<servlet-name>editProfile2</servlet-name>
+		<servlet-class>editProfile2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>editProfile2 </servlet-name>
+		<url-pattern>/editProfile2 </url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>updateUserData</servlet-name>
+		<servlet-class>updateUserData</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateUserData </servlet-name>
+		<url-pattern>/updateUserData </url-pattern>
+	</servlet-mapping>
+
 	<welcome-file-list id="WelcomeFileList">
 		<welcome-file>inicio.html</welcome-file>
 		</welcome-file-list>

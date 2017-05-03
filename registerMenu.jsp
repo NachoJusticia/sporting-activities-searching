@@ -38,7 +38,7 @@
 		<div class="registerForm">
 			<p>Please, fill the following form to register</p>
 
-			<form action=<%=response.encodeURL( "confirmData") %> method="POST" name="registerForm" onsubmit="return validate()">
+			<form action=<%= response.encodeURL("confirmData") %> method="POST" name="registerForm" onsubmit="return validate()">
 				<div class="container">
 					<div class="contentForm">
 						<label><b>Login</b></label>

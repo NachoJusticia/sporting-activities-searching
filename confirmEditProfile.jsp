@@ -13,17 +13,18 @@
 		<%@ include file="banner.include" %>
 
 		<%
-	String login = (String) session.getAttribute("login");
+		String login = (String) session.getAttribute("login");
 	String password = (String) session.getAttribute("password"); 
 	String name = (String) session.getAttribute("name"); 
 	String surname = (String) session.getAttribute("surname");
 	String address = (String) session.getAttribute("address"); 
-	String phone = (String) session.getAttribute("phone"); %>
+	String phone = (String) session.getAttribute("phone");
+		%>
 
 			<div class="registerForm" style="width: 300px; height: 325px">
-				<p>Please, check your personal data...</p>
+				<p><b>Please, check the changes...</b></p>
 
-				<form action=<%= response.encodeURL("saveClient") %> method="POST">
+				<form action=<%= response.encodeURL("updateUserData") %> method="POST">
 					<div class="container">
 						<div class="contentForm">
 							<label>Login</label>
@@ -49,13 +50,12 @@
 							<button type="submit" class="button">Confirm</button>
 						</div>
 						<p></p>
+				</div>
 				</form>
-				<form action=<%= response.encodeURL("editData") %> method="POST">
+				<form action=<%= response.encodeURL("editProfile2") %> method="POST">
 					<div class="align">
 						<input type="submit" class="button" value="Back">
 					</div>
-				</form>
-				</div>
 				</form>
 			</div>
  <%@ include file="copyright.include" %>

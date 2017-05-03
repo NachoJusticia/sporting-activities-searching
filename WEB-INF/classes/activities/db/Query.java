@@ -21,6 +21,11 @@ public class Query {
     public int doUpdate(String query) throws SQLException {
 	return stmt.executeUpdate(query);
     }
+
+    public void updateSQL(String query, Connection con) throws SQLException {
+        PreparedStatement ps = con.prepareStatement(query);
+        ps.executeUpdate();
+    }
  
     // Method to close an Statement object
     public void close() throws SQLException {

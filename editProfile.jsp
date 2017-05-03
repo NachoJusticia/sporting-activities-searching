@@ -7,7 +7,6 @@
 		function validate() {
 			var form = document.registerForm;
 			var login = form.login.value;
-			var password = form.password.value;
 			var name = form.name.value;
 			var surname = form.surname.value;
 			var address = form.address.value;
@@ -31,28 +30,28 @@
 
 <body style="background-color:lightblue;">
 	<%@ page session="true" %>
-		<%@ include file="banner.include" %>
+	<%@ include file="banner.include" %>
 
 			<%
-	String login = (String) session.getAttribute("login");
-	String password = (String) session.getAttribute("password"); 
-	String name = (String) session.getAttribute("name"); 
-	String surname = (String) session.getAttribute("surname");
-	String address = (String) session.getAttribute("address"); 
-	String phone = (String) session.getAttribute("phone"); %>
+		String login = (String) session.getAttribute("login");
+	String name = request.getParameter("name"); 
+	String surname = request.getParameter("surname");
+	String address = request.getParameter("address"); 
+	String phone = request.getParameter("phone"); 
+	session.setAttribute("name",name);
+	session.setAttribute("surname",surname);
+	session.setAttribute("address",address);
+	session.setAttribute("phone",phone);
+		%>
 				<div class="registerForm">
 					<p>Please, edit your personal data</p>
 
-					<form action=<%=response.encodeURL("confirmData") %> method="POST" onsubmit="return validate()">
+					<form action=<%= response.encodeURL("confirmEditProfile") %> method="POST" onsubmit="return validate()">
 						<div class="container">
 							<div class="contentForm">
 								<label><b>Login</b></label>
 								<input type="text" value="<%= login%>" name="login" required class="inputText" maxlength="16">
 							</div>
-							<p>
-								<label><b>Password</b></label>
-								<input type="password" value="<%= password%>" name="password" required class="inputText" maxlength="16">
-							</p>
 							<p>
 								<label><b>Name</b></label>
 								<input type="text" value="<%= name%>" name="name" required class="inputText" maxlength="16">
@@ -70,9 +69,9 @@
 								<input type="text" value="<%= phone%>" name="phone" required class="inputText" maxlength="9">
 							</p>
 							<div class="align">
-								<button type="submit" class="button">Sing up</button>
+								<button type="submit" class="button">Edit</button>
 
-								<a type="button" class="button" href="inicio.html">Cancel</a>
+								<a type="button" class="button" href=<%= response.encodeURL("application.jsp") %>>Cancel</a>
 							</div>
 						</div>
 					</form>

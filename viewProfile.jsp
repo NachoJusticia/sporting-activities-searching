@@ -33,6 +33,7 @@
 <body style="background-color:lightblue;">
     <%@ page session="true" %>
         <%@ include file="banner.include" %>
+        <% String name = (String) request.getParameter("name");%>
 
                 <p>&nbsp;</p>
                 <h3 class="align">Profile</h3>
@@ -43,7 +44,7 @@
                     </tr>
                     <tr>
                         <td>Name</td>
-                        <td><b><%=request.getParameter("name")%></b></td>
+                        <td><b><%= name%></b></td>
                     </tr>
                     <tr>
                         <td>Surname</td>
@@ -58,10 +59,15 @@
                         <td><b><%=request.getParameter("phone")%></b></td>
                     </tr>
                 </table>
-                <form action="" method="POST">
+                <form action=<%= response.encodeURL("editProfile.jsp") %> method="POST">
                     &nbsp;
                     <div class="align">
                         <input class="button" type="submit" value="Edit Profile"></div>
+                        <input type="hidden" name="login" value=<%= (String) session.getAttribute("login")%>>
+                        <input type="hidden" name="name" value=<%= name%>>
+                        <input type="hidden" name="surname" value=<%= request.getParameter("surname")%>>
+                        <input type="hidden" name="address" value=<%= request.getParameter("address")%>>
+                        <input type="hidden" name="phone" value=<%= request.getParameter("phone")%>>
                 </form>
                 <p>&nbsp;</p>
                 <div class="align">
