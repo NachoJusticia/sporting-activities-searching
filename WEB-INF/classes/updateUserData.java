@@ -13,7 +13,8 @@ public class updateUserData extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{
         
         HttpSession session = req.getSession(true);
-        
+        session.setAttribute("message","");
+
         try {
             DBInteraction db = new DBInteraction();
             db.updateUser((String)session.getAttribute("login"), 

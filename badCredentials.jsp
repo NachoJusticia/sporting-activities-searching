@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="styles.css" />
 
 <body style="background-color:lightblue;">
-    <%@ page session="true" %>
+    
 
         <%@ include file="banner.include" %>
 

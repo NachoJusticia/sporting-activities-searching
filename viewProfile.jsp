@@ -31,7 +31,7 @@
 <link rel="stylesheet" type="text/css" href="tables.css" />
 
 <body style="background-color:lightblue;">
-    <%@ page session="true" %>
+    
         <%@ include file="banner.include" %>
         <% String name = (String) request.getParameter("name");%>
 

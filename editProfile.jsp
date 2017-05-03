@@ -29,11 +29,12 @@
 <link rel="stylesheet" type="text/css" href="styles.css" />
 
 <body style="background-color:lightblue;">
-	<%@ page session="true" %>
+	
 	<%@ include file="banner.include" %>
 
 			<%
-		String login = (String) session.getAttribute("login");
+	session.setAttribute("message","");
+	String login = (String) session.getAttribute("login");
 	String name = request.getParameter("name"); 
 	String surname = request.getParameter("surname");
 	String address = request.getParameter("address"); 
