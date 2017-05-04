@@ -44,10 +44,7 @@
 
 					<form action=<%=response.encodeURL("confirmEditProfile") %> method="POST" onsubmit="return validate()">
 						<div class="container">
-							<div class="contentForm">
-								<label><b>Login</b></label>
-								<input type="text" value="<%= login%>" name="login" required class="inputText" maxlength="16">
-							</div>
+							&nbsp;
 							<p>
 								<label><b>Name</b></label>
 								<input type="text" value="<%= name%>" name="name" required class="inputText" maxlength="16">

@@ -12,13 +12,11 @@ public class confirmEditProfile extends HttpServlet {
         
         HttpSession session = req.getSession(true);
 
-        String login = req.getParameter("login");
         String name = req.getParameter("name");
         String surname = req.getParameter("surname");
         String address = req.getParameter("address");
         String phone = req.getParameter("phone");
 
-        session.setAttribute("login",login);
         session.setAttribute("name",name);
         session.setAttribute("surname",surname);
         session.setAttribute("address",address);

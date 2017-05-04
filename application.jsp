@@ -37,7 +37,7 @@
                     <option value="act_pav" SELECTED> List activities for which there are places in certain pavillion
                     <option value="subscribed_activities" SELECTED> List all activities in which I am subscribed
                     <option value="subscribe_activity" SELECTED> Subscribe to an activity
-                    <option value="unsubscribe_activity" SELECTED> Unubscribe from an activity
+                    <option value="unsubscribe_activity" SELECTED> Unsubscribe from an activity
                 </select>
                     </p>
                     <p>
