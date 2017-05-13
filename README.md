@@ -23,33 +23,33 @@ Once a user is authenticated, he can do the following things:
 - CSS
 - SQL
 
-### Software architecture pattern
+### Software architecture pattern
 The application has been developed using the Model View Control pattern.
 
 ### Data model using MYSQL
 The data model of the application is composed of the following tables:
 - ACTIVITIES: 
-     · ID
-     · NAME
-     · Description
-     · Initial
-     · START_DATE
-     · COST
-     · PAVILLION_NAME
-     · TOTAL_PLACES
-     · OCUPIED_PLACES
+     - ID
+     - NAME
+     - Description
+     - Initial
+     - START_DATE
+     - COST
+     - PAVILLION_NAME
+     - TOTAL_PLACES
+     - OCUPIED_PLACES
 - PAVILLIONS: available pavillions and their corresponding locations
-     · PAVILLION
-     · LOCATION
+     - PAVILLION
+     - LOCATION
 - CLIENTS: to store the application users
-     · LOGIN
-     · PASSWORD
-     · NAME
-     · SURNAME
-     · PHONE
-     · ADDRESS
+     - LOGIN
+     - PASSWORD
+     - NAME
+     - SURNAME
+     - PHONE
+     - ADDRESS
 - REGISTRATIONS: this table is used when the users want to register into an activity.
-     · CLIENT_LOGIN
-     · ACTIVITY_ID
+     - CLIENT_LOGIN
+     - ACTIVITY_ID
      
     
